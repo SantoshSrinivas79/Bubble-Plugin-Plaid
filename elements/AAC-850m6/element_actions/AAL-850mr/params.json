@@ -1,0 +1,63 @@
+{
+    "caption": "Get bank account with",
+    "fields": {
+        "AAM": {
+            "caption": "Environment",
+            "default_val": "Sandbox",
+            "editor": "Dropdown",
+            "name": "environment",
+            "options": "Sandbox,Development,Production",
+            "rank": 0
+        },
+        "AAN": {
+            "caption": "Collect Auth",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_auth",
+            "rank": 1
+        },
+        "AAO": {
+            "caption": "Collect Transactions",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_transactions",
+            "rank": 2
+        },
+        "AAP": {
+            "caption": "Collect Identity",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "product_identity",
+            "rank": 3
+        },
+        "AAQ": {
+            "caption": "Collect asset",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_asset",
+            "rank": 4
+        },
+        "AAR": {
+            "caption": "Webhook URL",
+            "editor": "DynamicValue",
+            "name": "webhookurl",
+            "optional": true,
+            "rank": 6,
+            "value": "text"
+        },
+        "AAS": {
+            "caption": "Client Name",
+            "editor": "DynamicValue",
+            "name": "client_name",
+            "rank": 7,
+            "value": "text"
+        },
+        "AEM": {
+            "caption": "Collect Investment",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_investment",
+            "rank": 5
+        }
+    }
+}

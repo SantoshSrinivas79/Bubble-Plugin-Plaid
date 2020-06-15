@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "use_jquery": true
+    },
+    "shared_keys": {
+        "ABG": {
+            "caption": "Plaid Public Key",
+            "type": "client_safe"
+        }
+    }
+}

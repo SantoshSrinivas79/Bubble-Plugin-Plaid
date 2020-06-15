@@ -1,0 +1,63 @@
+{
+    "caption": "Update bank account with",
+    "fields": {
+        "AAU": {
+            "caption": "Public Token",
+            "editor": "DynamicValue",
+            "name": "public_token_update",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAV": {
+            "caption": "Environment",
+            "default_val": "Sandbox",
+            "editor": "Dropdown",
+            "name": "environment_update",
+            "options": "Sandbox,Development,Production",
+            "rank": 1
+        },
+        "AAW": {
+            "caption": "Collect Auth",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_auth_update",
+            "rank": 2
+        },
+        "AAX": {
+            "caption": "Collect Transactions",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_transactions_update",
+            "rank": 3
+        },
+        "AAY": {
+            "caption": "Collect Identity",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "product_identity_update",
+            "rank": 4
+        },
+        "AAZ": {
+            "caption": "Collect asset",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "product_asset_update",
+            "rank": 5
+        },
+        "AAa": {
+            "caption": "Webhook URL",
+            "editor": "DynamicValue",
+            "name": "webhookurl_update",
+            "optional": true,
+            "rank": 6,
+            "value": "text"
+        },
+        "AAb": {
+            "caption": "Client Name",
+            "editor": "DynamicValue",
+            "name": "client_name_update",
+            "rank": 7,
+            "value": "text"
+        }
+    }
+}

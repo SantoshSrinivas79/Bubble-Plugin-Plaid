@@ -1,0 +1,455 @@
+{
+    "calls": {
+        "AAf": {
+            "body": "{\n    \"public_token\": \"<Public Token>\",\n    \"client_id\": \"<Client ID>\",\n    \"secret\": \"<Secret Key>\"\n}",
+            "body_params": {
+                "ACH": {
+                    "key": "Public Token",
+                    "private": true,
+                    "value": "public-sandbox-3eefb36b-406b-4645-b7f7-faef373bb54f"
+                },
+                "ACI": {
+                    "doc": "",
+                    "key": "Client ID",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "ACJ": {
+                    "key": "Secret Key",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                }
+            },
+            "body_type": "json",
+            "headers": {
+                "ACF": {
+                    "key": "Content-Type",
+                    "private": true,
+                    "value": "application/json"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Get access token",
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AAf",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAf\":{\"caption\":\"Get access token\",\"fields\":{\"_p_access_token\":{\"ret_value\":\"text\",\"caption\":\"access_token\",\"path\":[\"access_token\"]},\"_p_item_id\":{\"ret_value\":\"text\",\"caption\":\"item_id\",\"path\":[\"item_id\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]}}}}",
+            "url": "https://[Environment].plaid.com/item/public_token/exchange",
+            "url_params": {
+                "AAg": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AAi": {
+            "initialized": true,
+            "method": "post",
+            "name": "Get public token",
+            "params": {
+                "AEA": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                }
+            },
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AAi",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAi\":{\"caption\":\"Get public token\",\"fields\":{\"_p_expiration\":{\"ret_value\":\"text\",\"caption\":\"expiration\",\"path\":[\"expiration\"]},\"_p_public_token\":{\"ret_value\":\"text\",\"caption\":\"public_token\",\"path\":[\"public_token\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]}}}}",
+            "url": "https://[Environment].plaid.com/item/public_token/create",
+            "url_params": {
+                "AAj": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AAl": {
+            "initialized": false,
+            "method": "post",
+            "name": "Get Stripe bank account token",
+            "params": {
+                "AAn": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                },
+                "AAo": {
+                    "key": "account_id",
+                    "private": true,
+                    "value": "DQ3wjNqL91F1zAAnNblBCWEEzdVbr8fvrgr37"
+                }
+            },
+            "publish_as": "action",
+            "rank": 2,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AAl",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAl\":{\"caption\":\"Get Stripe bank account token\",\"fields\":{\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]},\"_p_stripe_bank_account_token\":{\"ret_value\":\"text\",\"caption\":\"stripe_bank_account_token\",\"path\":[\"stripe_bank_account_token\"]}}}}",
+            "url": "https://[Environment].plaid.com/processor/stripe/bank_account_token/create",
+            "url_params": {
+                "AAm": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AAp": {
+            "initialized": true,
+            "method": "post",
+            "name": "Get bank account details",
+            "params": {
+                "AAr": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                }
+            },
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AAp",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAp\":{\"caption\":\"Get bank account detail\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AAp.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_numbers.ach\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AAp.numbers.ach\",\"caption\":\"numbers ach\",\"path\":[\"numbers\",\"ach\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]}}},\"plugin_api.AAp.accounts\":{\"caption\":\"Get bank account details account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"number\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.limit\":{\"ret_value\":\"text\",\"caption\":\"balances limit\",\"path\":[\"balances\",\"limit\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.AAp.numbers.ach\":{\"caption\":\"Get bank account details numbers ach\",\"fields\":{\"_p_account\":{\"ret_value\":\"text\",\"caption\":\"account\",\"path\":[\"account\"]},\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_routing\":{\"ret_value\":\"text\",\"caption\":\"routing\",\"path\":[\"routing\"]},\"_p_wire_routing\":{\"ret_value\":\"text\",\"caption\":\"wire_routing\",\"path\":[\"wire_routing\"]}}}}",
+            "url": "https://[Environment].plaid.com/auth/get",
+            "url_params": {
+                "AAq": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AAs": {
+            "initialized": true,
+            "method": "post",
+            "name": "Get transactions",
+            "params": {
+                "AAu": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                },
+                "AAv": {
+                    "key": "start_date",
+                    "private": true,
+                    "value": "2018-03-01"
+                },
+                "AAw": {
+                    "key": "end_date",
+                    "private": true,
+                    "value": "2018-03-30"
+                }
+            },
+            "publish_as": "action",
+            "rank": 4,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AAs",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAs\":{\"caption\":\"Get transaction\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AAs.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]},\"_p_total_transactions\":{\"ret_value\":\"number\",\"caption\":\"total_transactions\",\"path\":[\"total_transactions\"]}}},\"plugin_api.AAs.accounts\":{\"caption\":\"Get transactions account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"number\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.limit\":{\"ret_value\":\"text\",\"caption\":\"balances limit\",\"path\":[\"balances\",\"limit\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}}}",
+            "url": "https://[Environment].plaid.com/transactions/get",
+            "url_params": {
+                "AAt": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AAx": {
+            "body": "{\n    \"client_id\": \"<Client ID>\",\n    \"secret\": \"<Secret Key>\",\n    \"access_token\": \"<Access Token>\",\n    \"options\": {\n        \"account_ids\": [\"<Account ID>\"]\n     }\n}",
+            "body_params": {
+                "ABA": {
+                    "key": "Client ID",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "ABB": {
+                    "key": "Secret Key",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                },
+                "ABC": {
+                    "key": "Access Token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                },
+                "ABD": {
+                    "key": "Account ID",
+                    "private": true,
+                    "value": "gdvN5dbJlEs8WxlLB9R7TvdNBa5DynugN1XV1"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Get balance",
+            "publish_as": "action",
+            "rank": 5,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AAx",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAx\":{\"caption\":\"Get balance\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AAx.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]}}},\"plugin_api.AAx.accounts\":{\"caption\":\"Get balance account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"number\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.limit\":{\"ret_value\":\"text\",\"caption\":\"balances limit\",\"path\":[\"balances\",\"limit\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}}}",
+            "url": "https://[Environment].plaid.com/accounts/balance/get",
+            "url_params": {
+                "AAy": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "ABH": {
+            "body": "{\n    \"client_id\": \"<Client ID>\",\n    \"secret\": \"<Secret Key>\",\n    \"access_tokens\": [\"<Access Token>\"],\n    \"days_requested\": <days_requested>\n}",
+            "body_params": {
+                "ABI": {
+                    "key": "Client ID",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "ABJ": {
+                    "key": "Secret Key",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                },
+                "ABK": {
+                    "key": "Access Token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                },
+                "ABL": {
+                    "key": "days_requested",
+                    "private": true,
+                    "value": "180"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Create Asset Report",
+            "publish_as": "action",
+            "rank": 6,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.ABH",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ABH\":{\"caption\":\"Create Asset Report\",\"fields\":{\"_p_asset_report_id\":{\"ret_value\":\"text\",\"caption\":\"asset_report_id\",\"path\":[\"asset_report_id\"]},\"_p_asset_report_token\":{\"ret_value\":\"text\",\"caption\":\"asset_report_token\",\"path\":[\"asset_report_token\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]}}}}",
+            "url": "https://sandbox.plaid.com/asset_report/create"
+        },
+        "ABM": {
+            "body": "{\n   \"client_id\": \"<Client ID>\",\n   \"secret\": \"<Secret Key>\",\n   \"asset_report_token\": \"<asset_report_token>\"\n}",
+            "body_params": {
+                "ABN": {
+                    "key": "Client ID",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "ABO": {
+                    "key": "Secret Key",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                },
+                "ABP": {
+                    "key": "asset_report_token",
+                    "private": true,
+                    "value": "assets-sandbox-53c0d271-c196-4ac5-912a-8b7b5dacd4cd"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Get Asset Report",
+            "publish_as": "action",
+            "rank": 7,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.ABM",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ABM\":{\"caption\":\"Get Asset Report\",\"fields\":{\"_p_report.asset_report_id\":{\"ret_value\":\"text\",\"caption\":\"report asset_report_id\",\"path\":[\"report\",\"asset_report_id\"]},\"_p_report.client_report_id\":{\"ret_value\":\"text\",\"caption\":\"report client_report_id\",\"path\":[\"report\",\"client_report_id\"]},\"_p_report.date_generated\":{\"ret_value\":\"text\",\"caption\":\"report date_generated\",\"path\":[\"report\",\"date_generated\"]},\"_p_report.days_requested\":{\"ret_value\":\"number\",\"caption\":\"report days_requested\",\"path\":[\"report\",\"days_requested\"]},\"_p_report.items\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.report.items\",\"caption\":\"report\",\"path\":[\"report\",\"items\"]},\"_p_report.user.client_user_id\":{\"ret_value\":\"text\",\"caption\":\"report user client_user_id\",\"path\":[\"report\",\"user\",\"client_user_id\"]},\"_p_report.user.email\":{\"ret_value\":\"text\",\"caption\":\"report user email\",\"path\":[\"report\",\"user\",\"email\"]},\"_p_report.user.first_name\":{\"ret_value\":\"text\",\"caption\":\"report user first_name\",\"path\":[\"report\",\"user\",\"first_name\"]},\"_p_report.user.last_name\":{\"ret_value\":\"text\",\"caption\":\"report user last_name\",\"path\":[\"report\",\"user\",\"last_name\"]},\"_p_report.user.middle_name\":{\"ret_value\":\"text\",\"caption\":\"report user middle_name\",\"path\":[\"report\",\"user\",\"middle_name\"]},\"_p_report.user.phone_number\":{\"ret_value\":\"text\",\"caption\":\"report user phone_number\",\"path\":[\"report\",\"user\",\"phone_number\"]},\"_p_report.user.ssn\":{\"ret_value\":\"text\",\"caption\":\"report user ssn\",\"path\":[\"report\",\"user\",\"ssn\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]}}},\"plugin_api.ABM.report.items\":{\"caption\":\"Get Asset Report report item\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_date_last_updated\":{\"ret_value\":\"text\",\"caption\":\"date_last_updated\",\"path\":[\"date_last_updated\"]},\"_p_institution_id\":{\"ret_value\":\"text\",\"caption\":\"institution_id\",\"path\":[\"institution_id\"]},\"_p_institution_name\":{\"ret_value\":\"text\",\"caption\":\"institution_name\",\"path\":[\"institution_name\"]},\"_p_item_id\":{\"ret_value\":\"text\",\"caption\":\"item_id\",\"path\":[\"item_id\"]}}},\"plugin_api.ABM.accounts\":{\"caption\":\"Get Asset Report account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"text\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_days_available\":{\"ret_value\":\"number\",\"caption\":\"days_available\",\"path\":[\"days_available\"]},\"_p_historical_balances\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.historical_balances\",\"caption\":\"historical_balances\",\"path\":[\"historical_balances\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_owners\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.owners\",\"caption\":\"owners\",\"path\":[\"owners\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_transactions\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.transactions\",\"caption\":\"transactions\",\"path\":[\"transactions\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.ABM.historical_balances\":{\"caption\":\"Get Asset Report historical_balance\",\"fields\":{\"_p_current\":{\"ret_value\":\"number\",\"caption\":\"current\",\"path\":[\"current\"]},\"_p_date\":{\"ret_value\":\"date\",\"caption\":\"date\",\"path\":[\"date\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}},\"plugin_api.ABM.owners\":{\"caption\":\"Get Asset Report owner\",\"fields\":{\"_p_addresses\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.addresses\",\"caption\":\"addresses\",\"path\":[\"addresses\"]},\"_p_emails\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.emails\",\"caption\":\"emails\",\"path\":[\"emails\"]},\"_p_names\":{\"ret_value\":\"list.text\",\"caption\":\"names\",\"path\":[\"names\"]},\"_p_phone_numbers\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABM.phone_numbers\",\"caption\":\"phone_numbers\",\"path\":[\"phone_numbers\"]}}},\"plugin_api.ABM.addresses\":{\"caption\":\"Get Asset Report addresse\",\"fields\":{\"_p_data.city\":{\"ret_value\":\"text\",\"caption\":\"city\",\"path\":[\"data\",\"city\"]},\"_p_data.state\":{\"ret_value\":\"text\",\"caption\":\"state\",\"path\":[\"data\",\"state\"]},\"_p_data.street\":{\"ret_value\":\"text\",\"caption\":\"street\",\"path\":[\"data\",\"street\"]},\"_p_data.zip\":{\"ret_value\":\"text\",\"caption\":\"zip\",\"path\":[\"data\",\"zip\"]},\"_p_primary\":{\"ret_value\":\"boolean\",\"caption\":\"primary\",\"path\":[\"primary\"]}}},\"plugin_api.ABM.emails\":{\"caption\":\"Get Asset Report email\",\"fields\":{\"_p_data\":{\"ret_value\":\"text\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_primary\":{\"ret_value\":\"boolean\",\"caption\":\"primary\",\"path\":[\"primary\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.ABM.phone_numbers\":{\"caption\":\"Get Asset Report phone_number\",\"fields\":{\"_p_data\":{\"ret_value\":\"text\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_primary\":{\"ret_value\":\"boolean\",\"caption\":\"primary\",\"path\":[\"primary\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.ABM.transactions\":{\"caption\":\"Get Asset Report transaction\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_amount\":{\"ret_value\":\"number\",\"caption\":\"amount\",\"path\":[\"amount\"]},\"_p_date\":{\"ret_value\":\"date\",\"caption\":\"date\",\"path\":[\"date\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_original_description\":{\"ret_value\":\"text\",\"caption\":\"original_description\",\"path\":[\"original_description\"]},\"_p_pending\":{\"ret_value\":\"boolean\",\"caption\":\"pending\",\"path\":[\"pending\"]},\"_p_transaction_id\":{\"ret_value\":\"text\",\"caption\":\"transaction_id\",\"path\":[\"transaction_id\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}}}",
+            "url": "https://sandbox.plaid.com/asset_report/get"
+        },
+        "ABQ": {
+            "body": "{\n    \"client_id\": \"<Client ID>\",\n    \"secret\": \"<Secret Key>\",\n    \"access_token\": \"<Access Token>\"\n}",
+            "body_params": {
+                "ABS": {
+                    "key": "Client ID",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843",
+                    "visibility": "public"
+                },
+                "ABT": {
+                    "key": "Secret Key",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce",
+                    "visibility": "public"
+                },
+                "ABU": {
+                    "key": "Access Token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Get investment holdings",
+            "publish_as": "action",
+            "rank": 8,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.ABQ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABQ\":{\"caption\":\"Get investment holding\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABQ.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_holdings\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABQ.holdings\",\"caption\":\"holdings\",\"path\":[\"holdings\"]},\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]},\"_p_securities\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABQ.securities\",\"caption\":\"securities\",\"path\":[\"securities\"]}}},\"plugin_api.ABQ.accounts\":{\"caption\":\"Get investment holdings account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"number\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.limit\":{\"ret_value\":\"text\",\"caption\":\"balances limit\",\"path\":[\"balances\",\"limit\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.ABQ.holdings\":{\"caption\":\"Get investment holdings holding\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_cost_basis\":{\"ret_value\":\"number\",\"caption\":\"cost_basis\",\"path\":[\"cost_basis\"]},\"_p_institution_price\":{\"ret_value\":\"number\",\"caption\":\"institution_price\",\"path\":[\"institution_price\"]},\"_p_institution_price_as_of\":{\"ret_value\":\"text\",\"caption\":\"institution_price_as_of\",\"path\":[\"institution_price_as_of\"]},\"_p_institution_value\":{\"ret_value\":\"number\",\"caption\":\"institution_value\",\"path\":[\"institution_value\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_quantity\":{\"ret_value\":\"number\",\"caption\":\"quantity\",\"path\":[\"quantity\"]},\"_p_security_id\":{\"ret_value\":\"text\",\"caption\":\"security_id\",\"path\":[\"security_id\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}},\"plugin_api.ABQ.securities\":{\"caption\":\"Get investment holdings securitie\",\"fields\":{\"_p_close_price\":{\"ret_value\":\"number\",\"caption\":\"close_price\",\"path\":[\"close_price\"]},\"_p_close_price_as_of\":{\"ret_value\":\"text\",\"caption\":\"close_price_as_of\",\"path\":[\"close_price_as_of\"]},\"_p_cusip\":{\"ret_value\":\"text\",\"caption\":\"cusip\",\"path\":[\"cusip\"]},\"_p_institution_id\":{\"ret_value\":\"text\",\"caption\":\"institution_id\",\"path\":[\"institution_id\"]},\"_p_institution_security_id\":{\"ret_value\":\"text\",\"caption\":\"institution_security_id\",\"path\":[\"institution_security_id\"]},\"_p_is_cash_equivalent\":{\"ret_value\":\"boolean\",\"caption\":\"is_cash_equivalent\",\"path\":[\"is_cash_equivalent\"]},\"_p_isin\":{\"ret_value\":\"text\",\"caption\":\"isin\",\"path\":[\"isin\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_proxy_security_id\":{\"ret_value\":\"text\",\"caption\":\"proxy_security_id\",\"path\":[\"proxy_security_id\"]},\"_p_security_id\":{\"ret_value\":\"text\",\"caption\":\"security_id\",\"path\":[\"security_id\"]},\"_p_sedol\":{\"ret_value\":\"text\",\"caption\":\"sedol\",\"path\":[\"sedol\"]},\"_p_ticker_symbol\":{\"ret_value\":\"text\",\"caption\":\"ticker_symbol\",\"path\":[\"ticker_symbol\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}}}",
+            "url": "https://[Environment].plaid.com/investments/holdings/get",
+            "url_params": {
+                "ABR": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "Sandbox"
+                }
+            }
+        },
+        "ABW": {
+            "body": "",
+            "initialized": true,
+            "method": "post",
+            "name": "Get investment transactions",
+            "params": {
+                "AEB": {
+                    "key": "client_id",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "AEC": {
+                    "key": "secret",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                },
+                "AED": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                },
+                "AEE": {
+                    "key": "start_date",
+                    "private": true,
+                    "value": "2019-01-01"
+                },
+                "AEF": {
+                    "key": "end_date",
+                    "private": true,
+                    "value": "2020-01-01"
+                }
+            },
+            "publish_as": "action",
+            "rank": 9,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.ABW",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABW\":{\"caption\":\"Get investment transaction\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABW.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_investment_transactions\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABW.investment_transactions\",\"caption\":\"investment_transactions\",\"path\":[\"investment_transactions\"]},\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]},\"_p_securities\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.ABW.securities\",\"caption\":\"securities\",\"path\":[\"securities\"]},\"_p_total_investment_transactions\":{\"ret_value\":\"number\",\"caption\":\"total_investment_transactions\",\"path\":[\"total_investment_transactions\"]}}},\"plugin_api.ABW.accounts\":{\"caption\":\"Get investment transactions account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"number\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.limit\":{\"ret_value\":\"text\",\"caption\":\"balances limit\",\"path\":[\"balances\",\"limit\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.ABW.investment_transactions\":{\"caption\":\"Get investment transactions investment_transaction\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_amount\":{\"ret_value\":\"number\",\"caption\":\"amount\",\"path\":[\"amount\"]},\"_p_cancel_transaction_id\":{\"ret_value\":\"text\",\"caption\":\"cancel_transaction_id\",\"path\":[\"cancel_transaction_id\"]},\"_p_date\":{\"ret_value\":\"date\",\"caption\":\"date\",\"path\":[\"date\"]},\"_p_fees\":{\"ret_value\":\"number\",\"caption\":\"fees\",\"path\":[\"fees\"]},\"_p_investment_transaction_id\":{\"ret_value\":\"text\",\"caption\":\"investment_transaction_id\",\"path\":[\"investment_transaction_id\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_price\":{\"ret_value\":\"number\",\"caption\":\"price\",\"path\":[\"price\"]},\"_p_quantity\":{\"ret_value\":\"number\",\"caption\":\"quantity\",\"path\":[\"quantity\"]},\"_p_security_id\":{\"ret_value\":\"text\",\"caption\":\"security_id\",\"path\":[\"security_id\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}},\"plugin_api.ABW.securities\":{\"caption\":\"Get investment transactions securitie\",\"fields\":{\"_p_close_price\":{\"ret_value\":\"number\",\"caption\":\"close_price\",\"path\":[\"close_price\"]},\"_p_close_price_as_of\":{\"ret_value\":\"text\",\"caption\":\"close_price_as_of\",\"path\":[\"close_price_as_of\"]},\"_p_cusip\":{\"ret_value\":\"text\",\"caption\":\"cusip\",\"path\":[\"cusip\"]},\"_p_institution_id\":{\"ret_value\":\"text\",\"caption\":\"institution_id\",\"path\":[\"institution_id\"]},\"_p_institution_security_id\":{\"ret_value\":\"text\",\"caption\":\"institution_security_id\",\"path\":[\"institution_security_id\"]},\"_p_is_cash_equivalent\":{\"ret_value\":\"boolean\",\"caption\":\"is_cash_equivalent\",\"path\":[\"is_cash_equivalent\"]},\"_p_isin\":{\"ret_value\":\"text\",\"caption\":\"isin\",\"path\":[\"isin\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_proxy_security_id\":{\"ret_value\":\"text\",\"caption\":\"proxy_security_id\",\"path\":[\"proxy_security_id\"]},\"_p_security_id\":{\"ret_value\":\"text\",\"caption\":\"security_id\",\"path\":[\"security_id\"]},\"_p_sedol\":{\"ret_value\":\"text\",\"caption\":\"sedol\",\"path\":[\"sedol\"]},\"_p_ticker_symbol\":{\"ret_value\":\"text\",\"caption\":\"ticker_symbol\",\"path\":[\"ticker_symbol\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}}}",
+            "url": "https://[Environment].plaid.com/investments/transactions/get",
+            "url_params": {
+                "ABX": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AEG": {
+            "initialized": true,
+            "method": "post",
+            "name": "API Call",
+            "params": {
+                "AEI": {
+                    "key": "client_id",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "AEJ": {
+                    "key": "secret",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                },
+                "AEK": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-ed6279d0-6872-41bb-b966-f336658a5c83"
+                }
+            },
+            "publish_as": "data",
+            "rank": 10,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AEG",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AEG\":{\"caption\":\"API Call\",\"fields\":{\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]},\"_p_status.last_webhook\":{\"ret_value\":\"text\",\"caption\":\"status last_webhook\",\"path\":[\"status\",\"last_webhook\"]},\"_p_status.transactions.last_failed_update\":{\"ret_value\":\"text\",\"caption\":\"status transactions last_failed_update\",\"path\":[\"status\",\"transactions\",\"last_failed_update\"]},\"_p_status.transactions.last_successful_update\":{\"ret_value\":\"text\",\"caption\":\"status transactions last_successful_update\",\"path\":[\"status\",\"transactions\",\"last_successful_update\"]}}}}",
+            "url": "https://[Environment].plaid.com/item/get",
+            "url_params": {
+                "AEL": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        },
+        "AEN": {
+            "initialized": true,
+            "method": "post",
+            "name": "Get investment transactions",
+            "params": {
+                "AEP": {
+                    "key": "client_id",
+                    "private": true,
+                    "value": "5e9049001a286500156fd843"
+                },
+                "AEQ": {
+                    "key": "secret",
+                    "private": true,
+                    "value": "2a9b257505944fe057a3a0a42956ce"
+                },
+                "AER": {
+                    "key": "access_token",
+                    "private": true,
+                    "value": "access-sandbox-3dae896c-4c2c-43d9-8151-5e30ba5f3820"
+                },
+                "AES": {
+                    "key": "start_date",
+                    "private": true,
+                    "value": "2019-01-01"
+                },
+                "AET": {
+                    "key": "end_date",
+                    "private": true,
+                    "value": "2020-01-01"
+                }
+            },
+            "publish_as": "data",
+            "rank": 11,
+            "ret_value": "api.1552042154268x774900723428622300.plugin_api.AEN",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AEN\":{\"caption\":\"Get investment transaction\",\"fields\":{\"_p_accounts\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AEN.accounts\",\"caption\":\"accounts\",\"path\":[\"accounts\"]},\"_p_investment_transactions\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AEN.investment_transactions\",\"caption\":\"investment_transactions\",\"path\":[\"investment_transactions\"]},\"_p_item.available_products\":{\"ret_value\":\"list.text\",\"caption\":\"item available_products\",\"path\":[\"item\",\"available_products\"]},\"_p_item.billed_products\":{\"ret_value\":\"list.text\",\"caption\":\"item billed_products\",\"path\":[\"item\",\"billed_products\"]},\"_p_item.consent_expiration_time\":{\"ret_value\":\"text\",\"caption\":\"item consent_expiration_time\",\"path\":[\"item\",\"consent_expiration_time\"]},\"_p_item.error\":{\"ret_value\":\"text\",\"caption\":\"item error\",\"path\":[\"item\",\"error\"]},\"_p_item.institution_id\":{\"ret_value\":\"text\",\"caption\":\"item institution_id\",\"path\":[\"item\",\"institution_id\"]},\"_p_item.item_id\":{\"ret_value\":\"text\",\"caption\":\"item item_id\",\"path\":[\"item\",\"item_id\"]},\"_p_item.webhook\":{\"ret_value\":\"text\",\"caption\":\"item webhook\",\"path\":[\"item\",\"webhook\"]},\"_p_request_id\":{\"ret_value\":\"text\",\"caption\":\"request_id\",\"path\":[\"request_id\"]},\"_p_securities\":{\"ret_value\":\"list.api.1552042154268x774900723428622300.plugin_api.AEN.securities\",\"caption\":\"securities\",\"path\":[\"securities\"]},\"_p_total_investment_transactions\":{\"ret_value\":\"number\",\"caption\":\"total_investment_transactions\",\"path\":[\"total_investment_transactions\"]}}},\"plugin_api.AEN.accounts\":{\"caption\":\"Get investment transactions account\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_balances.available\":{\"ret_value\":\"number\",\"caption\":\"balances available\",\"path\":[\"balances\",\"available\"]},\"_p_balances.current\":{\"ret_value\":\"number\",\"caption\":\"balances current\",\"path\":[\"balances\",\"current\"]},\"_p_balances.iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances iso_currency_code\",\"path\":[\"balances\",\"iso_currency_code\"]},\"_p_balances.limit\":{\"ret_value\":\"text\",\"caption\":\"balances limit\",\"path\":[\"balances\",\"limit\"]},\"_p_balances.unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"balances unofficial_currency_code\",\"path\":[\"balances\",\"unofficial_currency_code\"]},\"_p_mask\":{\"ret_value\":\"text\",\"caption\":\"mask\",\"path\":[\"mask\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_official_name\":{\"ret_value\":\"text\",\"caption\":\"official_name\",\"path\":[\"official_name\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]}}},\"plugin_api.AEN.investment_transactions\":{\"caption\":\"Get investment transactions investment_transaction\",\"fields\":{\"_p_account_id\":{\"ret_value\":\"text\",\"caption\":\"account_id\",\"path\":[\"account_id\"]},\"_p_amount\":{\"ret_value\":\"number\",\"caption\":\"amount\",\"path\":[\"amount\"]},\"_p_cancel_transaction_id\":{\"ret_value\":\"text\",\"caption\":\"cancel_transaction_id\",\"path\":[\"cancel_transaction_id\"]},\"_p_date\":{\"ret_value\":\"date\",\"caption\":\"date\",\"path\":[\"date\"]},\"_p_fees\":{\"ret_value\":\"number\",\"caption\":\"fees\",\"path\":[\"fees\"]},\"_p_investment_transaction_id\":{\"ret_value\":\"text\",\"caption\":\"investment_transaction_id\",\"path\":[\"investment_transaction_id\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_price\":{\"ret_value\":\"number\",\"caption\":\"price\",\"path\":[\"price\"]},\"_p_quantity\":{\"ret_value\":\"number\",\"caption\":\"quantity\",\"path\":[\"quantity\"]},\"_p_security_id\":{\"ret_value\":\"text\",\"caption\":\"security_id\",\"path\":[\"security_id\"]},\"_p_subtype\":{\"ret_value\":\"text\",\"caption\":\"subtype\",\"path\":[\"subtype\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}},\"plugin_api.AEN.securities\":{\"caption\":\"Get investment transactions securitie\",\"fields\":{\"_p_close_price\":{\"ret_value\":\"number\",\"caption\":\"close_price\",\"path\":[\"close_price\"]},\"_p_close_price_as_of\":{\"ret_value\":\"text\",\"caption\":\"close_price_as_of\",\"path\":[\"close_price_as_of\"]},\"_p_cusip\":{\"ret_value\":\"text\",\"caption\":\"cusip\",\"path\":[\"cusip\"]},\"_p_institution_id\":{\"ret_value\":\"text\",\"caption\":\"institution_id\",\"path\":[\"institution_id\"]},\"_p_institution_security_id\":{\"ret_value\":\"text\",\"caption\":\"institution_security_id\",\"path\":[\"institution_security_id\"]},\"_p_is_cash_equivalent\":{\"ret_value\":\"boolean\",\"caption\":\"is_cash_equivalent\",\"path\":[\"is_cash_equivalent\"]},\"_p_isin\":{\"ret_value\":\"text\",\"caption\":\"isin\",\"path\":[\"isin\"]},\"_p_iso_currency_code\":{\"ret_value\":\"text\",\"caption\":\"iso_currency_code\",\"path\":[\"iso_currency_code\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"path\":[\"name\"]},\"_p_proxy_security_id\":{\"ret_value\":\"text\",\"caption\":\"proxy_security_id\",\"path\":[\"proxy_security_id\"]},\"_p_security_id\":{\"ret_value\":\"text\",\"caption\":\"security_id\",\"path\":[\"security_id\"]},\"_p_sedol\":{\"ret_value\":\"text\",\"caption\":\"sedol\",\"path\":[\"sedol\"]},\"_p_ticker_symbol\":{\"ret_value\":\"text\",\"caption\":\"ticker_symbol\",\"path\":[\"ticker_symbol\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"path\":[\"type\"]},\"_p_unofficial_currency_code\":{\"ret_value\":\"text\",\"caption\":\"unofficial_currency_code\",\"path\":[\"unofficial_currency_code\"]}}}}",
+            "url": "https://[Environment].plaid.com/investments/transactions/get",
+            "url_params": {
+                "AEO": {
+                    "key": "Environment",
+                    "private": true,
+                    "value": "sandbox"
+                }
+            }
+        }
+    },
+    "human": "Plaid_new",
+    "shared_headers": {
+        "AAc": {
+            "key": "Content-Type",
+            "private": true,
+            "value": "application/json",
+            "visibility": "hidden"
+        }
+    },
+    "shared_params": {
+        "AAd": {
+            "doc": "",
+            "key": "client_id",
+            "private": true,
+            "visibility": "secret"
+        },
+        "AAe": {
+            "doc": "",
+            "key": "secret",
+            "private": true,
+            "visibility": "secret"
+        }
+    }
+}

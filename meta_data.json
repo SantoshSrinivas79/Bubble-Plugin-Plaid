@@ -1,0 +1,15 @@
+{
+    "categories": {
+        "0": "ecommerce",
+        "1": "payment",
+        "2": "technical",
+        "3": "small business"
+    },
+    "description": "Easily integrate your user's bank accounts into your application with a secure, streamlined experience powered by Plaid. Extract transactions and details. Great for financial applications + Stripe.js!\n\n========SETUP=========\n\n1. Create a Plaid account \n2. Set the 'Plaid Public Key' to your Plaid Public Key\n3. Add the 'Plaid Link' element to your page\n4. Use the 'Get bank account' action in Element Actions to retrieve bank account information (optionally use the included workflow triggers as callbacks)\n5. Extract information from the Plaid Link element's states\n\nNote: any fields with '(body)' or '(header)' appended at for API calls!\n\nFor step-by-step guidance, check out our course below!",
+    "image": "//s3.amazonaws.com/appforest_uf/f1552042338180x960360875130179600/social-card.jpg",
+    "instructions": "",
+    "license": "open_source",
+    "link": "cisin.com",
+    "name": "Plaid",
+    "plugin_instructions": "Easily integrate your user's bank accounts into your application with a secure, streamlined experience powered by Plaid. Extract transactions and details. Great for financial applications + Stripe.js!\n\n========SETUP=========\n\n1. Create a Plaid account \n2. Set the 'Plaid Public Key' to your Plaid Public Key\n3. Add the 'Plaid Link' element to your page\n4. Use the 'Get bank account' action in Element Actions to retrieve bank account information (optionally use the included workflow triggers as callbacks)\n5. Extract information from the Plaid Link element's states\n\nNote: any fields with '(body)' or '(header)' appended at for API calls!\n\nFor step-by-step guidance, check out our course below!"
+}

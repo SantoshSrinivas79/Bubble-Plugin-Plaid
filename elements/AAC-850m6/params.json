@@ -1,0 +1,63 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 20,
+        "width": 20
+    },
+    "display": "Plaid",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1552042469552x402835404293123000/social-card.jpg",
+    "events": {
+        "AAG": {
+            "caption": "modal has displayed",
+            "name": "plaid_modal_showing"
+        },
+        "AAH": {
+            "caption": "token has been created",
+            "name": "plaid_token_created"
+        },
+        "AAI": {
+            "caption": "token couldn't be created",
+            "name": "plaid_error_occurred"
+        },
+        "AAJ": {
+            "caption": "account has been updated",
+            "name": "plaid_account_updated"
+        },
+        "AAK": {
+            "caption": "account couldn't be updated",
+            "name": "plaid_account_failed"
+        }
+    },
+    "icon": "ion-android-checkbox-blank",
+    "property_applications": {
+        "resizable": true
+    },
+    "states": {
+        "AAD": {
+            "caption": "Public Token",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\nreturn \"\";\n\n}"
+            },
+            "name": "plaid_public_token",
+            "value": "text"
+        },
+        "AAE": {
+            "caption": "Account IDs (list)",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "plaid_accounts",
+            "value": "text"
+        },
+        "AAF": {
+            "caption": "Error Message",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "plaid_error",
+            "value": "text"
+        }
+    }
+}
